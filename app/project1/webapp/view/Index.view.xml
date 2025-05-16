@@ -1,0 +1,71 @@
+ <mvc:View controllerName="project1.controller.Index"
+   xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    >
+   
+     <Page id="back" class="background">
+     <Toolbar id="toolbar" class="toolbar">
+      <Title  id="titl1e" text="Let's Organize a Match" level="H2"/>
+      <Button id="btn2"  text="Home" press="onHomePress"/>
+      <Button id="btn3"  text="History" press="onHistoryPress"/>
+      <MenuButton text="Add" id="add" icon="sap-icon://add">
+        <menu>
+          <Menu id="menu">
+            <MenuItem id="anyId" text="Add Team" press="onAddTeamPress"/>
+            <MenuItem id="anyId1" text="Add Ground" press="onAddGroundPress"/>
+            <MenuItem id="anyId2" text="Add Umpire" press="onAddUmpirePress"/>
+          </Menu>
+        </menu>
+      </MenuButton>
+      <Button id="btn" text="View" press="onViewPress"/>
+    </Toolbar>
+  
+     <VBox class="registrationWrapper1" id="y">
+     <VBox class="registrationWrapper" id="x">
+
+            <l:VerticalLayout id="MainLayout"  width="100%">
+
+
+
+                 <Label id="groundLabel" text="Select Grounds" labelFor="groundSelect"/>
+                <Select id="groundSelect" items="{/Grounds}">
+                    <items>
+                        <core:Item id="_IDGenItem" key="ID"  text="{Name}"/>
+                    </items>
+                </Select>
+
+                 <Label id="umpireLabel" text=" Select Umpires" labelFor="umpire"/>
+                <Select id="umpire" items="{/Umpires}">
+                    <items>
+                        <core:Item id="_IDGenItem11" key="ID"  text="{name}"/>
+                    </items>
+                </Select>
+
+               <Label id="team1" text="Select Team 1" labelFor="team11"/>
+                <Select id="team11" items="{/Teams}">
+                    <items>
+                        <core:Item id="xyz" text="{Name}"/>
+                    </items>
+                </Select>
+
+                <Label id="team2" text="Select Team 2" labelFor="team12"/>
+                <Select id="team12" items="{/Teams}">
+                    <items>
+                        <core:Item id="xyz1" text="{Name}"/>
+                    </items>
+                </Select>
+
+                <Label id="dateLabel1" text="Date" labelFor="datePicker"/>
+                <DatePicker id="datePicker1" valueFormat="yyyy-MM-dd" width="150px" />
+
+
+                <Button 
+                    id="SubmitButton" text="Submit" type="Emphasized"  class="sapUiSmallMarginTop"
+                    press=".onShowHello"/>
+            </l:VerticalLayout>
+        </VBox>
+        </VBox>
+    </Page>
+</mvc:View>
