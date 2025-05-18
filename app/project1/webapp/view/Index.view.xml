@@ -5,21 +5,21 @@
     xmlns:core="sap.ui.core"
     >
    
-     <Page id="back" class="background">
-     <Toolbar id="toolbar" class="toolbar">
+     <Page id="back1" class="background">
+     <Toolbar id="toolbar1" class="toolbar">
       <Title  id="titl1e" text="Let's Organize a Match" level="H2"/>
-      <Button id="btn2"  text="Home" press="onHomePress"/>
-      <Button id="btn3"  text="History" press="onHistoryPress"/>
-      <MenuButton text="Add" id="add" icon="sap-icon://add">
+      <Button id="btn21"  text="Home" press="onHomePress"/>
+      <Button id="btn31"  text="History" press="onHistoryPress"/>
+      <MenuButton text="Add" id="add1" icon="sap-icon://add">
         <menu>
-          <Menu id="menu">
-            <MenuItem id="anyId" text="Add Team" press="onAddTeamPress"/>
-            <MenuItem id="anyId1" text="Add Ground" press="onAddGroundPress"/>
-            <MenuItem id="anyId2" text="Add Umpire" press="onAddUmpirePress"/>
+          <Menu id="menu1">
+            <MenuItem id="anyId1234" text="Add Team" press="onAddTeamPress"/>
+            <MenuItem id="anyId12" text="Add Ground" press="onAddGroundPress"/>
+            <MenuItem id="anyId22" text="Add Umpire" press="onAddUmpirePress"/>
           </Menu>
         </menu>
       </MenuButton>
-      <Button id="btn" text="View" press="onViewPress"/>
+      <Button id="btn1" text="View" press="onViewPress"/>
     </Toolbar>
   
      <VBox class="registrationWrapper1" id="y">
@@ -30,28 +30,28 @@
 
 
                  <Label id="groundLabel" text="Select Grounds" labelFor="groundSelect"/>
-                <Select id="groundSelect" items="{/Grounds}">
+                <Select id="groundSelect" change="onSelectground" items="{/Grounds}">
                     <items>
                         <core:Item id="_IDGenItem" key="ID"  text="{Name}"/>
                     </items>
                 </Select>
 
                  <Label id="umpireLabel" text=" Select Umpires" labelFor="umpire"/>
-                <Select id="umpire" items="{/Umpires}">
+                <Select id="umpire" change="onSelectUmpire" items="{/Umpires}">
                     <items>
                         <core:Item id="_IDGenItem11" key="ID"  text="{name}"/>
                     </items>
                 </Select>
 
                <Label id="team1" text="Select Team 1" labelFor="team11"/>
-                <Select id="team11" items="{/Teams}">
+                <Select id="team11" change="onSelectTeam1"  items="{/Teams}">
                     <items>
                         <core:Item id="xyz" text="{Name}"/>
                     </items>
                 </Select>
 
                 <Label id="team2" text="Select Team 2" labelFor="team12"/>
-                <Select id="team12" items="{/Teams}">
+                <Select id="team12" change="onSelectTeam2" items="{/Teams}">
                     <items>
                         <core:Item id="xyz1" text="{Name}"/>
                     </items>
