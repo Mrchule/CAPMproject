@@ -9,6 +9,7 @@
      <Toolbar id="toolbar1" class="toolbar">
       <Title  id="titl1e" text="Let's Organize a Match" level="H2"/>
       <Button id="btn21"  text="Home" press="onHomePress"/>
+      <Button id="btn211"  text="Organize match" press="onMatch"/>
       <Button id="btn31"  text="History" press="onHistoryPress"/>
       <MenuButton text="Add" id="add1" icon="sap-icon://add">
         <menu>
@@ -32,28 +33,28 @@
                  <Label id="groundLabel" text="Select Grounds" labelFor="groundSelect"/>
                 <Select id="groundSelect" change="onSelectground" items="{/Grounds}">
                     <items>
-                        <core:Item id="_IDGenItem" key="ID"  text="{Name}"/>
+                        <core:Item id="_IDGenItem" key="{ID}"  text="{Name}"/>
                     </items>
                 </Select>
 
                  <Label id="umpireLabel" text=" Select Umpires" labelFor="umpire"/>
                 <Select id="umpire" change="onSelectUmpire" items="{/Umpires}">
                     <items>
-                        <core:Item id="_IDGenItem11" key="ID"  text="{name}"/>
+                        <core:Item id="_IDGenItem11" key="{ID}"  text="{name}"/>
                     </items>
                 </Select>
 
                <Label id="team1" text="Select Team 1" labelFor="team11"/>
                 <Select id="team11" change="onSelectTeam1"  items="{/Teams}">
                     <items>
-                        <core:Item id="xyz" text="{Name}"/>
+                        <core:Item id="xyz" key="{ID}" text="{Name}"/>
                     </items>
                 </Select>
 
                 <Label id="team2" text="Select Team 2" labelFor="team12"/>
                 <Select id="team12" change="onSelectTeam2" items="{/Teams}">
                     <items>
-                        <core:Item id="xyz1" text="{Name}"/>
+                        <core:Item id="xyz1" key="{ID}" text="{Name}"/>
                     </items>
                 </Select>
 

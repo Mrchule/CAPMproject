@@ -1,95 +1,66 @@
- <mvc:View controllerName="project1.controller.History"
-   xmlns:mvc="sap.ui.core.mvc"
+<mvc:View
+    controllerName="project1.controller.History"
+    xmlns:mvc="sap.ui.core.mvc"
     xmlns:l="sap.ui.layout"
     xmlns="sap.m"
     xmlns:layout="sap.ui.layout.form"
     xmlns:core="sap.ui.core"
-    >
+>
 
-     <Shell id="shell">
-        <App id="app">
-            <pages>
-                <Page id="page" title="{i18n>title}">
-                    <content>
-                        <Table id="table0" mode="SingleSelectLeft" selectionChange="onSelect">
-                            <headerToolbar>
-                                <OverflowToolbar>
-                                    <content>
-                                        <ToolbarSpacer />
-                                        <SearchField id="searchField" width="20%" placeholder="search" search=".onSearch" />
-                                        <Button id="createButton"  tooltip="Create" visible="true" press="onOpenAddDialog">
-                                            <layoutData>
-                                                <OverflowToolbarLayoutData priority="NeverOverflow" />
-                                            </layoutData>
-                                        </Button>
-                                        <Button id="deleteButton" icon="sap-icon://delete" tooltip="Delete" visible="false" press="onDelete">
-                                            <layoutData>
-                                                <OverflowToolbarLayoutData priority="NeverOverflow" />
-                                            </layoutData>
-                                        </Button>
+    <Shell id="shell">
+        <App id="app1">
+            <pages >
+                <Page
+                    id="page"
+                    class="background"
+                >
+<core:Fragment fragmentName="project1.view.CommonToolbar" type="XML"/>
+                    <content >
 
-                                        <Button id="saveButton" text="Save" type="Emphasized" visible="false" enabled="true" press="onSave" />
-                                        <Button id="editModeButton" visible="true" icon="sap-icon://edit" tooltip="Edit" press="onEditMode">
-                                            <layoutData>
-                                                <OverflowToolbarLayoutData priority="NeverOverflow" />
-                                            </layoutData>
-                                        </Button>
+<Table
+    id="matchTable"
+    class="sapUiSmallMargin"
+    items="{/MatchSetup}"
+    fixedLayout="false" 
+>
+    <columns>
+        <Column>
+            <Text text="Match ID" />
+        </Column>
+        <Column>
+            <Text text="Date" />
+        </Column>
+        <Column>
+            <Text text="Ground" />
+        </Column>
+        <Column>
+            <Text text="Team 1" />
+        </Column>
+        <Column>
+            <Text text="Team 2" />
+        </Column>
+        <Column>
+            <Text text="Umpire" />
+        </Column>
+    </columns>
 
-                                    </content>
-                                    <dependents>
-                                        <Dialog id="OpenDialog" title="Create Sales Order">
-                                            <buttons>
-                                                <Button id="confirmCreate" text="Create" press=".onCreate" type="Emphasized" />
-                                                <Button id="cancelCreate" text="Cancel" press="onCancelDialog" type="Transparent" />
-                                            </buttons>
-                                        </Dialog>
-                                    </dependents>
+    <items>
+        <ColumnListItem>
+            <cells>
+                <Text text="{ID}" wrapping="false" />
+                <Text text="{Match_date}" wrapping="false" />
+                <Text text="{ground/Name}" wrapping="false" />
+                <Text text="{team1/Name}" wrapping="false" />
+                <Text text="{team2/Name}" wrapping="false" />
+                <Text text="{umpire/name}" wrapping="false" />
+            </cells>
+        </ColumnListItem>
+    </items>
+</Table>
 
-                                </OverflowToolbar>
-                            </headerToolbar>
-                            <items>
-                                <ColumnListItem type="Active" id="item0">
-                                    <cells>
-                                        <Text id="id1" text="soNumber"/>
-                                        <Text id="id2" text="customerName"/>
-                                        <Text id="id3" text="customerNumber"/>
-                                        <Text id="id4" text="PoNumber"/>
-                                        <Text id="id5" text="inquiryNumber"/>
-                                        <Button id="id6" icon="sap-icon://edit" onPress="onSelect" />
-                                    </cells>
-                                </ColumnListItem>
-                            </items>
-                            <columns>
-                                <Column>
-                                    <header>
-                                        <Label text="So Number" />
-                                    </header>
-                                </Column>
-                                <Column>
-                                    <header>
-                                        <Label text="Customer Name" />
-                                    </header>
-                                </Column>
-                                <Column>
-                                    <header>
-                                        <Label text="Customer Number" />
-                                    </header>
-                                </Column>
-                                <Column>
-                                    <header>
-                                        <Label text="PO Number" />
-                                    </header>
-                                </Column>
-                                <Column>
-                                    <header>
-                                        <Label text="Inquiry Number" />
-                                    </header>
-                                </Column>
-                            </columns>
-                        </Table>
                     </content>
                 </Page>
             </pages>
         </App>
     </Shell>
-    </mvc:View>
+</mvc:View>

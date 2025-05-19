@@ -1,10 +1,13 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast",
-     "./Navbar.controller"
-], (Controller) => {
+    "sap/ui/core/mvc/Controller"
+  ], function (Controller) {
     "use strict";
-    return Controller.extend("project1.controller.LandingPage", {
+  
+    return Controller.extend("project1.controller.Navbar", {
+        onInit: function() {
+            console.log("Navbar Controller initialized");
+            
+        },
         press: function () {
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
             oRouter.navTo("LandingPage");
@@ -26,6 +29,6 @@ sap.ui.define([
             console.log("same page......");
         }
 
-
     });
-});
+  });
+  

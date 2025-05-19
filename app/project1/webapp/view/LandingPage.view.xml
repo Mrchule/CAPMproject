@@ -6,74 +6,35 @@
   xmlns:core="sap.ui.core">
 
   <Page id="back" class="background">
-     <Toolbar id="toolbar" class="toolbar">
-      <Title  id="title" text="Match Management App" level="H2"/>
-      <Button id="btn2"  text="Home" press="onHomePress"/>
-      <Button id="btn3"  text="History" press="onHistoryPress"/>
-      <MenuButton text="Add" id="add" icon="sap-icon://add">
-        <menu>
-          <Menu id="menu">
-            <MenuItem id="anyId" text="Add Team" press="onAddTeamPress"/>
-            <MenuItem id="anyId1" text="Add Ground" press="onAddGroundPress"/>
-            <MenuItem id="anyId2" text="Add Umpire" press="onAddUmpirePress"/>
-          </Menu>
-        </menu>
-      </MenuButton>
-      <Button id="btn" text="View" press="onViewPress"/>
-    </Toolbar>
-
-    <VBox id="contentArea" class="sapUiSmallMargin">
+   <core:Fragment fragmentName="project1.view.CommonToolbar" type="XML"/>
+    <VBox id="contentArea" class="sapUiSmallMargi">
        <VBox class="registrationWrapper1" id="yx">
      <VBox class="registrationWrapper" id="xy">
-            <l:VerticalLayout id="mainLayout"  width="100%">
-            
-                <Label id="groundLabel1" text="Ground" labelFor="groundSelect"/>
-                <Select id="groundSelect1">
-                    <items>
-                        <core:Item id="groundItemDefault" text="Select Ground"/>
-                        <core:Item id="groundItemA" text="Ground A"/>
-                        <core:Item id="groundItemB" text="Ground B"/>
-                    </items>
-                </Select>
-            
-
-                <Label id="umpireLabel1" text="Umpire" labelFor="umpireSelect"/>
-                <Select id="umpireSelect1">
-                    <items>
-                        <core:Item id="umpireItemDefault" text="Select Umpire"/>
-                        <core:Item id="umpireItem1" text="Umpire 1"/>
-                        <core:Item id="umpireItem2" text="Umpire 2"/>
-                    </items>
-                </Select>
-
-                <Label id="dateLabel" text="Date" labelFor="datePicker"/>
-                <DatePicker id="datePicker" valueFormat="yyyy-MM-dd" width="150px" />
-
-                <Label id="team1Label" text="Select Team 1" labelFor="team1Select"/>
-                <Select id="team1Select">
-                    <items>
-                        <core:Item id="team1ItemDefault" text="Select Team 1"/>
-                        <core:Item id="team1ItemAlpha" text="Team Alpha"/>
-                        <core:Item id="team1ItemBeta" text="Team Beta"/>
-                    </items>
-                </Select>
-
-                <Label id="team2Label" text="Select Team 2" labelFor="team2Select"/>
-                <Select id="team2Select">
-                    <items>
-                        <core:Item id="team2ItemDefault" text="Select Team 2"/>
-                        <core:Item id="team2ItemGamma" text="Team Gamma"/>
-                        <core:Item id="team2ItemDelta" text="Team Delta"/>
-                    </items>
-                </Select>
-
-                <Button 
-                    id="submitButton"
-                    text="Submit" 
-                    type="Emphasized" 
-                    class="sapUiSmallMarginTop"
-                    press=".onSubmitPress"/>
-            </l:VerticalLayout>
+ 
+          <TileContent id="newsTitle" class="sapUiSmallMargin">
+            <content>
+              <NewsContent id="inner"
+                contentText="SAP Unveils Powerful New Player Comparison Tool Exclusively on NFL.com"
+                subheader="August 21, 2013" press="press">
+              </NewsContent>
+            </content>
+          </TileContent>   
+          <TileContent id="newsTitle2" class="sapUiSmallMargin">
+            <content>
+              <NewsContent id="inner2"
+                contentText="SAP Unveils` Powerful New Player Comparison Tool Exclusively on NFL.com"
+                subheader="August 21, 2013" press="press">
+              </NewsContent>
+            </content>
+          </TileContent>   
+          <TileContent id="newsTitle1" class="sapUiSmallMargin">
+            <content>
+              <NewsContent id="inner1"
+                contentText="SAP Unveils Powerful New Player Comparison Tool Exclusively on NFL.com"
+                subheader="August 21, 2013" press="press">
+              </NewsContent>
+            </content>
+          </TileContent>   
         </VBox>
         </VBox>
     </VBox>

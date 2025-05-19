@@ -1,0 +1,18 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Toolbar id="toolbar0" class="toolbar">
+      <Title  id="title0" text="Match Management App" level="H2"/>
+      <Button id="btn20"  text="Home" press="onHomePress"/>
+      <Button id="btn220"  text="Organize match" press="onMatch"/>
+      <Button id="btn30"  text="History" press="onHistoryPress"/>
+      <MenuButton text="Add" id="add0" icon="sap-icon://add">
+        <menu>
+          <Menu id="menu0">
+            <MenuItem id="anyId0" text="Add Team" press="onAddTeamPress"/>
+            <MenuItem id="anyId10" text="Add Ground" press="onAddGroundPress"/>
+            <MenuItem id="anyId20" text="Add Umpire" press="onAddUmpirePress"/>
+          </Menu>
+        </menu>
+      </MenuButton>
+      <Button id="btn0" text="View" press="onViewPress"/>
+    </Toolbar>
+</core:FragmentDefinition>

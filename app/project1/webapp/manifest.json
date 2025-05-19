@@ -98,12 +98,45 @@
           "target": [
             "TargetIndex"
           ]
+        },
+        {
+          "name": "History",
+          "pattern": "History",
+          "target": [
+            "HistoryPage"
+          ]
+        },
+        {
+          "name": "Index",
+          "pattern": "Index",
+          "target": [
+            "IndexPage"
+          ]
+        },
+        {
+          "name": "LandingPage",
+          "pattern": "LandingPage",
+          "target": [
+            "LandingPage"
+          ]
         }
       ],
       "targets": {
         "TargetIndex": {
           "id": "Index",
+          "name":"Index"
+        },
+        "HistoryPage": {
+          "id": "History",
           "name":"History"
+        },
+        "LandingPage": {
+          "id": "landingPage",
+          "name":"LandingPage"
+        },
+        "IndexPage": {
+          "id": "Index",
+          "name":"Index"
         }
       }
     },
